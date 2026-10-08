@@ -9,6 +9,8 @@
 
 Application météo développée avec **React 19** et **Vite**, qui consomme l'API REST de [WeatherAPI.com](https://www.weatherapi.com/) pour afficher la météo actuelle, les prévisions sur 3 jours, la qualité de l'air et les alertes météorologiques d'une localisation.
 
+🔗 **Lien de démo : https://api-meteo-eta.vercel.app**
+
 ---
 
 ## 📋 Sommaire
