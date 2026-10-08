@@ -84,13 +84,13 @@ L'application est ensuite accessible sur [http://localhost:5173](http://localhos
 
 ## 🔑 Configuration de la clé API
 
-La clé API est lue depuis une variable d'environnement Vite. Créez un fichier `.env.local` à la racine du projet :
+La clé API est lue depuis une variable d'environnement Vite. Créez un fichier `.env` à la racine du projet :
 
 ```env
 VITE_WEATHER_API_KEY=votre_cle_api_ici
 ```
 
-> Le fichier `.env.local` est ignoré par Git (règle `*.local` du `.gitignore`) : votre clé ne sera jamais publiée sur le dépôt.
+> Le fichier `.env` est ignoré par Git (règle `*.local` du `.gitignore`) : votre clé ne sera jamais publiée sur le dépôt.
 > Un fichier `.env.example` est fourni comme modèle.
 
 > ⚠️ **À savoir :** dans une application 100 % front-end, toute variable préfixée par `VITE_` est injectée dans le bundle final et reste lisible dans le navigateur. Pour une mise en production, la clé devrait être protégée derrière un petit back-end ou une fonction serverless faisant office de proxy.

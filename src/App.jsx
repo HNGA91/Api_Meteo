@@ -1,8 +1,5 @@
 import { useState, useCallback } from "react";
 
-const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
-const BASE_URL = "https://api.weatherapi.com/v1";
-
 // Custom hook for weather data
 function useWeather() {
 	const [data, setData] = useState(null);
@@ -15,14 +12,10 @@ function useWeather() {
 
 		try {
 			const params = new URLSearchParams({
-				key: API_KEY,
-				q: location,
-				days: 3,
-				aqi: "yes",
-				alerts: "yes",
+				q: location
 			});
 
-			const response = await fetch(`${BASE_URL}/forecast.json?${params}`);
+			const response = await fetch(`/api/weather?${params}`);
 			const json = await response.json();
 
 			if (!response.ok) {
